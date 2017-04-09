@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+<title>Input:IntervalSplitter</title>
+</head>
+<body>
+	<h1>Enter Intervals</h1>
+ 	<form action= "#" th:action ="@{/intervalSplitter}" th:object ="${intervalSplitter}" method="post">
+		Include Intervals:<br> 
+		<input type="text" name= "includeIntervals" id="includeIntervals" th:field="*{includeIntervals}"/><br>
+		Exclude Intervals:<br>
+		<input type="text" name= "excludeIntervals" id="excludeIntervals" th:field="*{excludeIntervals}"/><br>
+		<p> <input type="submit" value="submit"/> <input type="reset" value="reset" /> </p>
+	</form>
+ 	<a href="/">Home page</a>
+</body>
+</html>

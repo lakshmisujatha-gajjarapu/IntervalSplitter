@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Result</title>
+</head>
+<body>
+	<h1> Result from the Interval Splitter</h1>
+	<body>
+ 		<p> Include Intervals:<br> 
+		<input type="text" name= "includeIntervals" id="includeIntervals" th:field="${intervalSplitter.includeIntervals}"/></p>
+		<p> Exclude Intervals:<br>
+		<input type="text" name= "excludeIntervals" id="excludeIntervals" th:field="${intervalSplitter.excludeIntervals}"/></p>
+		<p> Result Intervals:<br>
+		<input type= "text" name= "result" id = "result" style="width: 300px;" th:field="${intervalSplitter.result}"/> </p>
+	
+	<p th:if = "${#strings.isEmpty(intervalSplitter.includeIntervals)}" style = "color:blue" > result set empty as include interval is empty !!</p>  
+	<p th:unless = "${#strings.isEmpty(intervalSplitter.includeIntervals)}"> </p>
+	
+ 	<a href="/intervalSplitter">Submit another set of intervals</a><br>
+    <a href="/">Home page</a>
+    
+</body>
+	
+</body>
+</html>
